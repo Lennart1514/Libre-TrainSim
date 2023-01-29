@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Signal Bü 2 – Rautentafel (DS 301).obj-7c6b29ba7a97c725b6d7b82982b4881c.mesh"
+
+[deps]
+
+files=[ "res://.import/Signal Bü 2 – Rautentafel (DS 301).obj-7c6b29ba7a97c725b6d7b82982b4881c.mesh" ]
+
+source_file="res://Resources/SignalTypes/Bü/Bü 2/Signal Bü 2 – Rautentafel (DS 301).obj"
+dest_files=[ "res://.import/Signal Bü 2 – Rautentafel (DS 301).obj-7c6b29ba7a97c725b6d7b82982b4881c.mesh", "res://.import/Signal Bü 2 – Rautentafel (DS 301).obj-7c6b29ba7a97c725b6d7b82982b4881c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

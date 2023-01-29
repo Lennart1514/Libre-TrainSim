@@ -1,0 +1,62 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Resources/Materials/Metal_Black.tres" type="Material" id=1]
+[ext_resource path="res://Resources/Materials/Metal_White.tres" type="Material" id=2]
+[ext_resource path="res://Resources/Materials/Metal_Green.tres" type="Material" id=3]
+[ext_resource path="res://Resources/Materials/Metal_Yellow.tres" type="Material" id=4]
+[ext_resource path="res://Resources/SignalTypes/Bü/Bü 0_1/Signal Bü 0-Signal Bü 1.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://Resources/SignalTypes/Bü/ScriptingBü.gd" type="Script" id=6]
+
+[sub_resource type="SphereMesh" id=2]
+radius = 0.05
+height = 0.1
+
+[sub_resource type="SpatialMaterial" id=3]
+emission_enabled = true
+emission = Color( 1, 0, 0, 1 )
+emission_energy = 1.0
+emission_operator = 0
+emission_on_uv2 = false
+distance_fade_mode = 1
+distance_fade_min_distance = 70.0
+distance_fade_max_distance = 200.0
+
+[sub_resource type="SphereMesh" id=4]
+radius = 0.3
+height = 0.6
+radial_segments = 6
+rings = 3
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.723062, 3.19305, 0.495782 )
+
+[node name="VisualInstance" type="Spatial"]
+script = ExtResource( 6 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1.76671, 2.7182 )
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 3 )
+material/1 = ExtResource( 1 )
+material/2 = ExtResource( 4 )
+material/3 = ExtResource( 2 )
+material/4 = ExtResource( 1 )
+
+[node name="White" type="MeshInstance" parent="MeshInstance"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 1, -0.000621282, 3.38819, 0.0954209 )
+cast_shadow = 0
+mesh = SubResource( 2 )
+skeleton = NodePath("../..")
+
+[node name="MeshInstance" type="MeshInstance" parent="MeshInstance/White"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00268867, 0, 0 )
+visible = false
+material_override = SubResource( 3 )
+mesh = SubResource( 4 )
+
+[node name="SelectCollider" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6222, -1.3325, 2.3655 )
+
+[node name="AabbShape" type="CollisionShape" parent="SelectCollider"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.723062, 3.19305, 0.495782 )
+shape = SubResource( 5 )

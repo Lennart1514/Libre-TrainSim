@@ -134,20 +134,24 @@ margin_bottom = -1.0
 
 [node name="RailLogic" parent="EditorHUD/Settings/TabContainer" instance=ExtResource( 3 )]
 visible = false
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
+margin_left = 8.0
+margin_top = 25.0
+margin_right = -1.0
+margin_bottom = -1.0
 
 [node name="RailAttachments" parent="EditorHUD/Settings/TabContainer" instance=ExtResource( 7 )]
 visible = false
-margin_left = 4.0
-margin_top = 32.0
-margin_right = -4.0
-margin_bottom = -4.0
+margin_left = 8.0
+margin_top = 25.0
+margin_right = -1.0
+margin_bottom = -1.0
 
 [node name="BuildingSettings" parent="EditorHUD/Settings/TabContainer" instance=ExtResource( 28 )]
 visible = false
+margin_left = 8.0
+margin_top = 25.0
+margin_right = -1.0
+margin_bottom = -1.0
 
 [node name="VSeparator" type="VSeparator" parent="EditorHUD/Settings"]
 anchor_top = 0.5
@@ -664,6 +668,7 @@ margin_left = -150.0
 margin_top = -54.5
 margin_right = 150.0
 margin_bottom = 54.5
+rect_min_size = Vector2( 300, 105 )
 window_title = "Please confirm..."
 dialog_text = "Do you want to automatically correct this rail so it is drivable?"
 dialog_autowrap = true
